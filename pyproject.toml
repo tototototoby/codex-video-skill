@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codex-video-skill"
+version = "0.1.0"
+description = "Local-first timecoded video evidence for Codex"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "tototototoby"}]
+dependencies = ["av>=14,<20", "Pillow>=10,<13", "imageio-ffmpeg>=0.6,<0.7"]
+
+[project.optional-dependencies]
+asr = ["faster-whisper>=1.1,<2"]
+dev = ["pytest>=8,<10", "PyYAML>=6,<7", "build>=1,<2"]
+
+[project.scripts]
+codex-video = "codex_video.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+

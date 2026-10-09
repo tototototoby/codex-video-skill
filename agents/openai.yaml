@@ -1,0 +1,7 @@
+interface:
+  display_name: "长视频证据审阅"
+  short_description: "抽取长视频证据并标明审阅覆盖范围"
+  default_prompt: "使用 $codex-video-skill 审阅这个长视频并回答我的问题。检查可用的画面、字幕和音频证据，说明实际覆盖范围；调用额外模型服务前先确认我的选择与数据提交授权。"
+
+policy:
+  allow_implicit_invocation: true

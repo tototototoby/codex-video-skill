@@ -1,0 +1,6 @@
+include SKILL.md ATTRIBUTION.md THIRD_PARTY_NOTICES.md VALIDATION.md LICENSE README.md
+recursive-include agents *.yaml
+recursive-include scripts *.py
+recursive-include references *.md
+recursive-include examples *.py
+recursive-include tests *.py
